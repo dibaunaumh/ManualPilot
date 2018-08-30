@@ -1,2 +1,2 @@
 # ManualPilot
-An app to track your time to spend on important things 
+An app to track your time spent on important things 
