@@ -5,4 +5,4 @@ An app to track your time spent on important things.
 # Architecture
 * React front-end
 * Firebase back-end
-
+* D3.js charts
