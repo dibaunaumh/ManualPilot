@@ -1,0 +1,3446 @@
+/* Font copied in place by React Studio. Please check that your license for this font file permits embedding on a website. */
+@font-face {
+  font-family: 'Avenir-Book';
+  src: url('fonts/Avenir-Book.ttf');
+}
+
+.font-avenirBook {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+}
+@media (min-resolution: 120dpi) {
+  .font-avenirBook {
+    font-family: 'Avenir-Book', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  }
+}
+
+/* Font copied in place by React Studio. Please check that your license for this font file permits embedding on a website. */
+@font-face {
+  font-family: 'AvenirNext-Regular';
+  src: url('fonts/AvenirNext-Regular.ttf');
+}
+
+.font-avenirNextRegular {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+}
+@media (min-resolution: 120dpi) {
+  .font-avenirNextRegular {
+    font-family: 'AvenirNext-Regular', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  }
+}
+
+.App { /* Base font style */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 15.1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(0, 0, 0, 0.8500);
+  background-color: #f6f6f6;
+}
+
+.App .baseFont * { /* Base font style override for UI framework components */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 15.1px;
+}
+
+.App .appBg {
+  background-color: #f6f6f6;
+}
+
+.App .cardBg {
+  background-color: white;
+}
+
+.App .baseTextBg { /* Base text color as background */
+  background-color: rgba(0, 0, 0, 0.8500);
+}
+
+.App .secondaryTextColor {
+  color: rgba(0, 0, 0, 0.5000);
+}
+
+.App .secondaryTextBg {
+  background-color: rgba(0, 0, 0, 0.5000);
+}
+
+.App .primaryTextColor {
+  color: #212121;
+}
+
+.App .primaryBg {
+  background-color: #212121;
+}
+
+.App .highlightTextColor {
+  color: #424242;
+}
+
+.App .highlightBg {
+  background-color: #424242;
+}
+
+/* Styles to customize the UI framework plugin (MUI, https://muicss.com) */
+.mui-btn {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mui-btn--primary {
+    background-color: #212121;
+}
+.mui-btn--primary:active, .mui-btn--primary:focus, .mui-btn--primary:hover {
+    background-color: #373737;
+}
+.mui-btn--accent {
+    background-color: #424242;
+}
+.mui-btn--accent:active, .mui-btn--accent:focus, .mui-btn--accent:hover {
+    background-color: #555555;
+}
+.mui-textfield {  /* Reset UI framework styling that affects layout */
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.mui-checkbox, .mui-radio {  /* Reset UI framework styling that affects layout */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mui-select {  /* Reset UI framework styling that affects layout */
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.mui-btn+.mui-btn {  /* Reset UI framework styling that affects layout */
+    margin-left: 0;
+}
+.mui-btn--fab {  /* Reset UI framework styling that breaks compositing */
+    z-index: auto;
+}
+
+@keyframes fadeIn {
+    0%   { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes slideIn_right {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+@keyframes slideIn_bottom {
+    0%   { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+/* App-wide text styles specified in React Studio */
+.App .actionFont {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 14.2px;
+  font-weight: 400;
+}
+.App .actionFont * {
+  font-size: 14.2px;
+}
+.App .headlineFont {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 19.4px;
+  font-weight: 400;
+}
+.App .headlineFont * {
+  font-size: 19.4px;
+}
+.App .navBar {
+  background-color: #212121;
+  color: #feffff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 18px;
+}
+
+.App .navBar a {
+  color: #feffff;
+}
+
+.App .navBar .title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+  margin-top: 14px;
+}
+
+.App .navBar .backBtn {
+  position: absolute;
+  padding: 4px;
+  margin-left: 14px;
+  margin-top: 14px;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) {
+  .mui-container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 568px) {
+  .mui-container {
+    max-width: 568px;
+  }
+}
+@media (min-width: 768px) {
+  .mui-container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .mui-container {
+    max-width: 1024px;
+  }
+}
+
+.AppScreen {
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.App .background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.App .layoutFlow {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  float: left;
+}
+.App .layoutFlow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.App .layoutFlow .flowRow {
+  position: relative;
+  width: 100%;
+}
+
+.App .screenFgContainer {
+  /* Items in the foreground group within a screen are placed with fixed positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.App .foreground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.App .compContent {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.App ul {
+  margin: 0;
+  padding: 0;
+}
+.App li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+.App .hasNestedComps {
+  position: relative;
+}
+.App .hasNestedComps:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.App .hasNestedComps .background {
+  position: absolute;
+}
+.App .hasNestedComps .layoutFlow {
+  position: relative;
+}
+.App .hasNestedComps .foreground {
+  position: absolute;
+}
+.App .bottomAlignedContent {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* This component has a fixed-size layout */
+  .ProfilePicName {
+    min-height: 111px;
+    width: 100%; /* This component was designed using a width of 102px */
+  }
+  .ProfilePicName > .background > .containerMinHeight {
+    min-height: 111px;
+  }
+
+
+  .ProfilePicName .elTextCopy {
+    position: relative;
+    margin-top: 0px;
+    width: 101px;
+    margin-left: 0px;
+  }
+  .ProfilePicName .elTextCopy > * { 
+  width: 101px;
+  }
+  
+
+
+  .ProfilePicName .elImage {
+    position: absolute;
+    margin-top: 8px;
+    width: 68px;
+    margin-left: calc(50.0% - 34px);
+  }
+  .ProfilePicName .elImage > * { 
+  width: 68px;
+  height: 62px;
+  }
+  
+  .flowRow_ProfilePicName_elImage_667697 { 
+  }
+  
+
+
+/* Narrowest size for this element's responsive layout */
+  .WriteAReviewScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .WriteAReviewScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .WriteAReviewScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .WriteAReviewScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WriteAReviewScreen > .layoutFlow > .elTitle {
+    position: relative;
+    margin-top: 68px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elTitle > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .WriteAReviewScreen > .layoutFlow > .elTitle {
+    position: relative;
+    margin-top: 68px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elTitle > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WriteAReviewScreen > .layoutFlow > .elTitle {
+    position: relative;
+    margin-top: 68px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elTitle > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WriteAReviewScreen > .layoutFlow > .elTitle {
+    position: relative;
+    margin-top: 68px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elTitle > * { 
+    width: 100%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WriteAReviewScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 22px;
+    width: 108px;
+    margin-left: 12px;
+  }
+  .WriteAReviewScreen > .layoutFlow > .elImage > * { 
+  width: 108px;
+  height: 80px;
+  }
+  
+@media (min-width: 568px) {
+  .WriteAReviewScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 22px;
+    width: 108px;
+    margin-left: 12px;
+  }
+  .WriteAReviewScreen > .layoutFlow > .elImage > * { 
+  width: 108px;
+  height: 80px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WriteAReviewScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 22px;
+    width: 108px;
+    margin-left: 12px;
+  }
+  .WriteAReviewScreen > .layoutFlow > .elImage > * { 
+  width: 108px;
+  height: 80px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WriteAReviewScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 22px;
+    width: 108px;
+    margin-left: 12px;
+  }
+  .WriteAReviewScreen > .layoutFlow > .elImage > * { 
+  width: 108px;
+  height: 80px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WriteAReviewScreen > .layoutFlow > .elReviewerName {
+    position: relative;
+    margin-top: 26px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewerName > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+@media (min-width: 568px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewerName {
+    position: relative;
+    margin-top: 26px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewerName > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewerName {
+    position: relative;
+    margin-top: 26px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewerName > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewerName {
+    position: relative;
+    margin-top: 26px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewerName > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WriteAReviewScreen > .layoutFlow > .elReviewerEmail {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewerEmail > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+@media (min-width: 568px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewerEmail {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewerEmail > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewerEmail {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewerEmail > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewerEmail {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewerEmail > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WriteAReviewScreen > .layoutFlow > .elReviewTitle {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewTitle > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+@media (min-width: 568px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewTitle {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewTitle > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewTitle {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewTitle > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewTitle {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewTitle > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WriteAReviewScreen > .layoutFlow > .elRating {
+    position: relative;
+    margin-top: 33px;
+    width: 238px;
+    margin-left: 12px;
+  }
+  .WriteAReviewScreen > .layoutFlow > .elRating > * { 
+  width: 238px;
+  height: 55px;
+  }
+  
+@media (min-width: 568px) {
+  .WriteAReviewScreen > .layoutFlow > .elRating {
+    position: relative;
+    margin-top: 33px;
+    width: 238px;
+    margin-left: 12px;
+  }
+  .WriteAReviewScreen > .layoutFlow > .elRating > * { 
+  width: 238px;
+  height: 55px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WriteAReviewScreen > .layoutFlow > .elRating {
+    position: relative;
+    margin-top: 33px;
+    width: 237px;
+    margin-left: 12px;
+  }
+  .WriteAReviewScreen > .layoutFlow > .elRating > * { 
+  width: 237px;
+  height: 55px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WriteAReviewScreen > .layoutFlow > .elRating {
+    position: relative;
+    margin-top: 33px;
+    width: 237px;
+    margin-left: 12px;
+  }
+  .WriteAReviewScreen > .layoutFlow > .elRating > * { 
+  width: 237px;
+  height: 55px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WriteAReviewScreen > .layoutFlow > .elReviewText {
+    position: relative;
+    margin-top: 16px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewText > * { 
+    width: 100%;
+  height: 181px;
+  }
+  
+@media (min-width: 568px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewText {
+    position: relative;
+    margin-top: 16px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewText > * { 
+    width: 100%;
+  height: 181px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewText {
+    position: relative;
+    margin-top: 16px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewText > * { 
+    width: 100%;
+  height: 180px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WriteAReviewScreen > .layoutFlow > .elReviewText {
+    position: relative;
+    margin-top: 16px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elReviewText > * { 
+    width: 100%;
+  height: 180px;
+  }
+  
+}
+
+.WriteAReviewScreen .elSendButton button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .WriteAReviewScreen > .layoutFlow > .elSendButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 14px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elSendButton > * { 
+    width: 100%;
+  height: 35px;
+  }
+  
+@media (min-width: 568px) {
+  .WriteAReviewScreen > .layoutFlow > .elSendButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 14px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elSendButton > * { 
+    width: 100%;
+  height: 35px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WriteAReviewScreen > .layoutFlow > .elSendButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 14px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elSendButton > * { 
+    width: 100%;
+  height: 35px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WriteAReviewScreen > .layoutFlow > .elSendButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 14px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WriteAReviewScreen > .layoutFlow > .elSendButton > * { 
+    width: 100%;
+  height: 35px;
+  }
+  
+}
+
+.WriteAReviewScreen .elButton {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.WriteAReviewScreen .elButton:focus {
+  box-shadow: 0 0 6px rgba(254, 255, 255, 0.2500);
+  outline: none;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .WriteAReviewScreen > .screenFgContainer > .foreground > .elButton {
+    line-height: 35px;
+    position: absolute;
+    left: 11px;
+    top: 4px;
+    width: 71px;
+    height: 35px;
+  }
+@media (min-width: 568px) {
+  .WriteAReviewScreen > .screenFgContainer > .foreground > .elButton {
+    line-height: 35px;
+    left: 11px;
+    top: 12px;
+    width: 71px;
+    height: 35px;
+  }
+}
+@media (min-width: 768px) {
+  .WriteAReviewScreen > .screenFgContainer > .foreground > .elButton {
+    line-height: 35px;
+    left: 11px;
+    top: 13px;
+    width: 71px;
+    height: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .WriteAReviewScreen > .screenFgContainer > .foreground > .elButton {
+    line-height: 35px;
+    left: 11px;
+    top: 14px;
+    width: 71px;
+    height: 35px;
+  }
+}
+
+/* This component has a fixed-size layout */
+  .ListItemReview {
+    min-height: 182px;
+    width: 100%; /* This component was designed using a width of 480px */
+  }
+  .ListItemReview > .background > .containerMinHeight {
+    min-height: 182px;
+  }
+
+
+  .ListItemReview .elTextReviewSubject {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 124px;
+    margin-right: 0px;
+    width: calc(100.0% - 124px);
+  }
+  .ListItemReview .elTextReviewSubject > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemReview .elRating {
+    position: relative;
+    margin-top: 16px;
+    width: 130px;
+    margin-left: 124px;
+  }
+  .ListItemReview .elRating > * { 
+  width: 130px;
+  height: 34px;
+  }
+  
+
+
+  .ListItemReview .elTextReviewText {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 124px;
+    margin-right: 8px;
+    width: calc(100.0% - 133px);
+  }
+  .ListItemReview .elTextReviewText > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemReview .elTextReviewDate {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 124px;
+    margin-right: 8px;
+    width: calc(100.0% - 133px);
+  }
+  .ListItemReview .elTextReviewDate > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemReview .elComp {
+    position: absolute;
+    left: 13px;
+    top: 18px;
+    width: 114px;
+    height: 152px;
+  }
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginReviewScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .LoginReviewScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .LoginReviewScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .LoginReviewScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginReviewScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 76px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginReviewScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .LoginReviewScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 76px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginReviewScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginReviewScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 76px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginReviewScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginReviewScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 76px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginReviewScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginReviewScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginReviewScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 83px;
+  }
+  
+@media (min-width: 568px) {
+  .LoginReviewScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginReviewScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 83px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginReviewScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginReviewScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 82px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginReviewScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginReviewScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 82px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+@keyframes fadeIn_WeekActivitiesScreen_elImage {
+  0% { opacity: 0.0; }
+  44% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+.WeekActivitiesScreen > .layoutFlow > .elImage {
+  animation: 0.45s fadeIn_WeekActivitiesScreen_elImage;
+}
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 46px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elImage > * { 
+    width: 100%;
+  height: 200px;
+  }
+  
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 46px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elImage > * { 
+    width: 100%;
+  height: 200px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 46px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elImage > * { 
+    width: 100%;
+  height: 199px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 46px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elImage > * { 
+    width: 100%;
+  height: 502px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantName {
+    overflow: hidden;
+    position: relative;
+    margin-top: 11px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantName > * { 
+    width: 100%;
+  height: 44px;
+  }
+  
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantName {
+    overflow: hidden;
+    position: relative;
+    margin-top: 11px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantName > * { 
+    width: 100%;
+  height: 44px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantName {
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantName > * { 
+    width: 100%;
+  height: 44px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantName {
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantName > * { 
+    width: 100%;
+  height: 44px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantAddress {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantAddress > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantAddress {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantAddress > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantAddress {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantAddress > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantAddress {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elRestaurantAddress > * { 
+    width: 100%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .layoutFlow > .elTextOpeningHours {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextOpeningHours > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextOpeningHours {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextOpeningHours > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextOpeningHours {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextOpeningHours > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextOpeningHours {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextOpeningHours > * { 
+    width: 100%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .layoutFlow > .elTextDescription {
+    position: relative;
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextDescription > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextDescription {
+    position: relative;
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextDescription > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextDescription {
+    position: relative;
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextDescription > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextDescription {
+    position: relative;
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextDescription > * { 
+    width: 100%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .layoutFlow > .elTextRestaurantWWW {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextRestaurantWWW > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextRestaurantWWW {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextRestaurantWWW > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextRestaurantWWW {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextRestaurantWWW > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextRestaurantWWW {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextRestaurantWWW > * { 
+    width: 100%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .layoutFlow > .elLine {
+    position: relative;
+    margin-top: 18px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elLine > * { 
+    width: 100%;
+  height: 2px;
+  }
+  
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .layoutFlow > .elLine {
+    position: relative;
+    margin-top: 18px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elLine > * { 
+    width: 100%;
+  height: 2px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .layoutFlow > .elLine {
+    position: relative;
+    margin-top: 18px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elLine > * { 
+    width: 100%;
+  height: 2px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .layoutFlow > .elLine {
+    position: relative;
+    margin-top: 18px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elLine > * { 
+    width: 100%;
+  height: 2px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .layoutFlow > .elTextReviewsHeader {
+    position: relative;
+    margin-top: 11px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextReviewsHeader > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextReviewsHeader {
+    position: relative;
+    margin-top: 11px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextReviewsHeader > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextReviewsHeader {
+    position: relative;
+    margin-top: 11px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextReviewsHeader > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .layoutFlow > .elTextReviewsHeader {
+    position: relative;
+    margin-top: 11px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elTextReviewsHeader > * { 
+    width: 100%;
+  }
+  
+}
+
+  .WeekActivitiesScreen .elList li {
+    margin-bottom: 9px;
+  }
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: -3px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  height: 368px;
+  }
+  
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: -3px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  height: 368px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: -3px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  height: 366px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: -3px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .WeekActivitiesScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  height: 366px;
+  }
+  
+}
+
+.WeekActivitiesScreen .elFab {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeekActivitiesScreen > .screenFgContainer > .foreground > .elFab {
+    line-height: 68px;
+    position: fixed;
+    right: 23px;
+    bottom: 23px;
+    width: 68px;
+    height: 68px;
+  }
+@media (min-width: 568px) {
+  .WeekActivitiesScreen > .screenFgContainer > .foreground > .elFab {
+    line-height: 68px;
+    right: 23px;
+    bottom: 23px;
+    width: 68px;
+    height: 68px;
+  }
+}
+@media (min-width: 768px) {
+  .WeekActivitiesScreen > .screenFgContainer > .foreground > .elFab {
+    line-height: 68px;
+    right: 22px;
+    bottom: 22px;
+    width: 68px;
+    height: 68px;
+  }
+}
+@media (min-width: 1024px) {
+  .WeekActivitiesScreen > .screenFgContainer > .foreground > .elFab {
+    line-height: 68px;
+    right: 22px;
+    bottom: 22px;
+    width: 68px;
+    height: 68px;
+  }
+}
+
+/* This component has a fixed-size layout */
+  .UserInfo {
+    min-height: 37px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 189px */
+  }
+  .UserInfo > .background > .containerMinHeight {
+    min-height: 37px;
+  }
+
+
+  .UserInfo .state0_elTextBlock {
+    overflow: hidden;
+    position: absolute;
+    left: 120px;
+    top: 8px;
+    width: 62px;
+    height: 22px;
+  }
+
+/* This component has a fixed-size layout */
+  .UserInfo {
+    min-height: 37px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 189px */
+  }
+  .UserInfo > .background > .containerMinHeight {
+    min-height: 37px;
+  }
+
+
+  .UserInfo .state1_elImage {
+    position: absolute;
+    left: 155px;
+    top: 7px;
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .UserInfo .state1_elTextBlock {
+    overflow: hidden;
+    position: absolute;
+    left: 79px;
+    top: 9px;
+    width: 68px;
+    height: 22px;
+  }
+
+/* This component has a fixed-size layout */
+  .WeekSummary {
+    min-height: 94px;
+    width: 100%; /* This component was designed using a width of 76px */
+  }
+  .WeekSummary > .background > .containerMinHeight {
+    min-height: 94px;
+  }
+
+
+  .WeekSummary .state0_elBackground {
+    position: absolute;
+    left: 0px;
+    right: 3px;
+    top: 0px;
+    width: calc(100.0% - 0px - 3px);
+    height: 94px;
+  }
+
+
+  .WeekSummary .state0_elText1029876 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .WeekSummary .state0_elText1029876 > * { 
+    width: 100%;
+  }
+  
+
+
+  .WeekSummary .state0_elStart_date535680 {
+    position: relative;
+    margin-top: 3px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .WeekSummary .state0_elStart_date535680 > * { 
+    width: 100%;
+  }
+  
+
+.WeekSummary .state0_elButton660615 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+  .WeekSummary .state0_elButton660615 {
+    line-height: 31px;
+    position: relative;
+    margin-top: -7px;
+    width: 63px;
+    margin-left: calc(57.9% + -44px);
+  }
+  .WeekSummary .state0_elButton660615 > * { 
+  width: 63px;
+  height: 31px;
+  }
+  
+
+
+  .WeekSummary .state0_elLine770531 {
+    position: relative;
+    margin-top: 7px;
+    margin-left: 6px;
+    margin-right: 0px;
+    width: calc(100.0% - 6px);
+  }
+  .WeekSummary .state0_elLine770531 > * { 
+    width: 100%;
+  height: 2px;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .WeekSummary {
+    min-height: 94px;
+    width: 100%; /* This component was designed using a width of 76px */
+  }
+  .WeekSummary > .background > .containerMinHeight {
+    min-height: 94px;
+  }
+
+
+  .WeekSummary .state1_elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+  .WeekSummary .state1_elText1029876 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .WeekSummary .state1_elText1029876 > * { 
+    width: 100%;
+  }
+  
+
+
+  .WeekSummary .state1_elStart_date535680 {
+    position: relative;
+    margin-top: 3px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .WeekSummary .state1_elStart_date535680 > * { 
+    width: 100%;
+  }
+  
+
+.WeekSummary .state1_elButton660615 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+  .WeekSummary .state1_elButton660615 {
+    line-height: 31px;
+    position: relative;
+    margin-top: -7px;
+    width: 63px;
+    margin-left: calc(57.9% + -44px);
+  }
+  .WeekSummary .state1_elButton660615 > * { 
+  width: 63px;
+  height: 31px;
+  }
+  
+
+
+  .WeekSummary .state1_elLine770531 {
+    position: relative;
+    margin-top: 7px;
+    margin-left: 6px;
+    margin-right: 0px;
+    width: calc(100.0% - 6px);
+  }
+  .WeekSummary .state1_elLine770531 > * { 
+    width: 100%;
+  height: 2px;
+  }
+  
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeeksInThisYearScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .WeeksInThisYearScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .WeeksInThisYearScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .WeeksInThisYearScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+  .WeeksInThisYearScreen .elList:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .WeeksInThisYearScreen .elList .gridItem {
+    float: left;
+    position: relative;
+  }
+
+@media (min-width: 1024px) {
+  .WeeksInThisYearScreen .elList .gridItem {
+    width: calc(100% / 4 - 9.0px*(3/4));
+    overflow: hidden;
+  }
+
+  .WeeksInThisYearScreen .elList .cols4_0 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+    clear: left;
+  }
+  .WeeksInThisYearScreen .elList .cols4_1 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .WeeksInThisYearScreen .elList .cols4_2 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .WeeksInThisYearScreen .elList .cols4_3 {
+    margin-bottom: 9.0px;
+  }
+  .WeeksInThisYearScreen .elList .cols4_3:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 1023px) {
+  .WeeksInThisYearScreen .elList .gridItem {
+    width: calc(100% / 4 - 9.0px*(3/4));
+    overflow: hidden;
+  }
+
+  .WeeksInThisYearScreen .elList .cols4_0 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+    clear: left;
+  }
+  .WeeksInThisYearScreen .elList .cols4_1 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .WeeksInThisYearScreen .elList .cols4_2 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .WeeksInThisYearScreen .elList .cols4_3 {
+    margin-bottom: 9.0px;
+  }
+  .WeeksInThisYearScreen .elList .cols4_3:after { }
+  .WeeksInThisYearScreen .elList .cols4_3:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .WeeksInThisYearScreen .elList .gridItem {
+    width: calc(100% / 2 - 9.1px*(1/2));
+    overflow: hidden;
+  }
+
+  .WeeksInThisYearScreen .elList .cols4_0 { margin-right: 0; margin-bottom: 0; }
+  .WeeksInThisYearScreen .elList .cols4_1 { margin-right: 0; margin-bottom: 0; }
+  .WeeksInThisYearScreen .elList .cols4_2 { margin-right: 0; margin-bottom: 0; }
+  .WeeksInThisYearScreen .elList .cols4_3 { margin-right: 0; margin-bottom: 0; }
+  .WeeksInThisYearScreen .elList .cols2_0 {
+    margin-right: 9.1px;
+    margin-bottom: 9.1px;
+    clear: left;
+  }
+  .WeeksInThisYearScreen .elList .cols2_1 {
+    margin-bottom: 9.1px;
+  }
+  .WeeksInThisYearScreen .elList .cols4_3:after { }
+  .WeeksInThisYearScreen .elList .cols4_3:after { }
+  .WeeksInThisYearScreen .elList .cols2_1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 567px) {
+  .WeeksInThisYearScreen .elList .gridItem {
+    width: calc(100% / 1 - 0.0px*(0/1));
+    overflow: hidden;
+  }
+
+  .WeeksInThisYearScreen .elList .cols4_0 { margin-right: 0; margin-bottom: 0; }
+  .WeeksInThisYearScreen .elList .cols4_1 { margin-right: 0; margin-bottom: 0; }
+  .WeeksInThisYearScreen .elList .cols4_2 { margin-right: 0; margin-bottom: 0; }
+  .WeeksInThisYearScreen .elList .cols4_3 { margin-right: 0; margin-bottom: 0; }
+  .WeeksInThisYearScreen .elList .cols2_0 { margin-right: 0; margin-bottom: 0; }
+  .WeeksInThisYearScreen .elList .cols2_1 { margin-right: 0; margin-bottom: 0; }
+  .WeeksInThisYearScreen .elList .cols1_0 {
+    margin-bottom: 9.1px;
+  }
+  .WeeksInThisYearScreen .elList .cols4_3:after { }
+  .WeeksInThisYearScreen .elList .cols4_3:after { }
+  .WeeksInThisYearScreen .elList .cols2_1:after { }
+  .WeeksInThisYearScreen .elList .cols1_0:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeeksInThisYearScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 109px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .WeeksInThisYearScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  height: 291px;
+  }
+  
+@media (min-width: 568px) {
+  .WeeksInThisYearScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 109px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .WeeksInThisYearScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  height: 193px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .WeeksInThisYearScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 108px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .WeeksInThisYearScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  height: 94px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .WeeksInThisYearScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 108px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .WeeksInThisYearScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  height: 94px;
+  }
+  
+}
+
+.circularProgressIndicator {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.circularProgressIndicator-active {
+    animation: rotate 2s linear infinite;
+    display: inline;
+}
+.circularProgress-animatedPath {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+    animation: circularProgress-dash 1.5s ease-in-out infinite;
+    stroke-linecap: round;
+}
+@keyframes rotate{
+    100%{
+    transform: rotate(360deg);
+    }
+}
+@keyframes circularProgress-dash{
+    0%{
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -35;
+    }
+    100%{
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -124;
+    }
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elProgressIndicator {
+    position: absolute;
+    left: calc(50.0% + 0px - 24px);
+    top: 138px;
+    width: 48px;
+    height: 48px;
+  }
+@media (min-width: 568px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elProgressIndicator {
+    left: calc(50.0% + 0px - 24px);
+    top: 138px;
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (min-width: 768px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elProgressIndicator {
+    left: calc(50.0% + 0px - 24px);
+    top: 138px;
+    width: 47px;
+    height: 47px;
+  }
+}
+@media (min-width: 1024px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elProgressIndicator {
+    left: calc(50.0% + 0px - 24px);
+    top: 138px;
+    width: 47px;
+    height: 47px;
+  }
+}
+
+@keyframes fadeIn_WeeksInThisYearScreen_elCardBG {
+  0% { opacity: 0.0; }
+  44% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+.WeeksInThisYearScreen > .screenFgContainer > .foreground > .elCardBG {
+  animation: 1.80s fadeIn_WeeksInThisYearScreen_elCardBG;
+}
+
+/* Narrowest size for this element's responsive layout */
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elCardBG {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 47px;
+    width: 100.0%;
+    height: 49px;
+  }
+@media (min-width: 568px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elCardBG {
+    left: 0px;
+    right: 0px;
+    top: 47px;
+    width: 100.0%;
+    height: 49px;
+  }
+}
+@media (min-width: 768px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elCardBG {
+    left: 0px;
+    right: 0px;
+    top: 46px;
+    width: 100.0%;
+    height: 49px;
+  }
+}
+@media (min-width: 1024px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elCardBG {
+    left: 0px;
+    right: 0px;
+    top: 62px;
+    width: 100.0%;
+    height: 49px;
+  }
+}
+
+@keyframes fadeIn_WeeksInThisYearScreen_elTextNumberOfItems {
+  0% { opacity: 0.0; }
+  29% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+.WeeksInThisYearScreen > .screenFgContainer > .foreground > .elTextNumberOfItems {
+  animation: 1.40s fadeIn_WeeksInThisYearScreen_elTextNumberOfItems;
+}
+
+/* Narrowest size for this element's responsive layout */
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elTextNumberOfItems {
+    position: fixed;
+    right: 69px;
+    top: 62px;
+    width: 227px;
+    height: 22px;
+  }
+@media (min-width: 568px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elTextNumberOfItems {
+    right: 69px;
+    top: 62px;
+    width: 227px;
+    height: 22px;
+  }
+}
+@media (min-width: 768px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elTextNumberOfItems {
+    right: 69px;
+    top: 62px;
+    width: 225px;
+    height: 22px;
+  }
+}
+@media (min-width: 1024px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elTextNumberOfItems {
+    right: 69px;
+    top: 76px;
+    width: 225px;
+    height: 22px;
+  }
+}
+
+@keyframes fadeIn_WeeksInThisYearScreen_elPickerNumberOfRows {
+  0% { opacity: 0.0; }
+  29% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+.WeeksInThisYearScreen > .screenFgContainer > .foreground > .elPickerNumberOfRows {
+  animation: 1.40s fadeIn_WeeksInThisYearScreen_elPickerNumberOfRows;
+}
+
+/* Narrowest size for this element's responsive layout */
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elPickerNumberOfRows {
+    position: fixed;
+    right: 7px;
+    top: 56px;
+    width: 53px;
+    height: 30px;
+  }
+@media (min-width: 568px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elPickerNumberOfRows {
+    right: 7px;
+    top: 56px;
+    width: 53px;
+    height: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elPickerNumberOfRows {
+    right: 7px;
+    top: 56px;
+    width: 53px;
+    height: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elPickerNumberOfRows {
+    right: 7px;
+    top: 70px;
+    width: 53px;
+    height: 30px;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elUserInfo {
+    position: fixed;
+    right: 0px;
+    top: 7px;
+    width: 185px;
+    height: 42px;
+  }
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 37px;
+  }
+
+@media (min-width: 568px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elUserInfo {
+    right: 0px;
+    top: 7px;
+    width: 185px;
+    height: 42px;
+  }
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 37px;
+  }
+
+}
+@media (min-width: 768px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elUserInfo {
+    right: 0px;
+    top: 7px;
+    width: 184px;
+    height: 41px;
+  }
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 36px;
+  }
+
+}
+@media (min-width: 1024px) {
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elUserInfo {
+    right: 0px;
+    top: 7px;
+    width: 184px;
+    height: 41px;
+  }
+  .WeeksInThisYearScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 36px;
+  }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginMainScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .LoginMainScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .LoginMainScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .LoginMainScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginMainScreen > .background > .elN00021restaurant {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .LoginMainScreen > .background > .elN00021restaurant {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .LoginMainScreen > .background > .elN00021restaurant {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .LoginMainScreen > .background > .elN00021restaurant {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginMainScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 72px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .LoginMainScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 72px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginMainScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 72px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginMainScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 72px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 70px;
+  }
+  
+@media (min-width: 568px) {
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 70px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 70px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 70px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginMainScreen > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: -3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText2 > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .LoginMainScreen > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: -3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText2 > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginMainScreen > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: -3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText2 > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginMainScreen > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: -3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText2 > * { 
+    width: 100%;
+  }
+  
+}
+
+/* This component has a fixed-size layout */
+  .RestaurantItem {
+    min-height: 428px;
+    min-width: 315px;
+     /* This component has a fixed size */
+  }
+  .RestaurantItem > .background > .containerMinHeight {
+    min-height: 428px;
+  }
+
+
+  .RestaurantItem .elBackgroundShape {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+  .RestaurantItem .elImage {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .RestaurantItem .elImage > * { 
+    width: 100%;
+  height: 214px;
+  }
+  
+
+
+  .RestaurantItem .elRestaurantName {
+    overflow: hidden;
+    position: relative;
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .RestaurantItem .elRestaurantName > * { 
+    width: 100%;
+  height: 44px;
+  }
+  
+
+
+  .RestaurantItem .elText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .RestaurantItem .elText > * { 
+    width: 100%;
+  }
+  
+
+
+  .RestaurantItem .elAddressCopy {
+    overflow: hidden;
+    position: relative;
+    margin-top: 11px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .RestaurantItem .elAddressCopy > * { 
+    width: 100%;
+  height: 38px;
+  }
+  
+
+.RestaurantItem .elButtonReviews button {
+  border: 0.0px solid transparent;
+}
+
+
+
+  .RestaurantItem .elButtonReviews {
+    line-height: 35px;
+    position: relative;
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .RestaurantItem .elButtonReviews > * { 
+    width: 100%;
+  height: 35px;
+  }
+  
+
+
+  .RestaurantItem .elRectangleSpacer {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .RestaurantItem .elRectangleSpacer > * { 
+    width: 100%;
+  height: 32px;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .NoSelectedRestaurant {
+    min-height: 148px;
+    min-width: 380px;
+     /* This component has a fixed size */
+  }
+  .NoSelectedRestaurant > .background > .containerMinHeight {
+    min-height: 148px;
+  }
+
+
+  .NoSelectedRestaurant .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+  .NoSelectedRestaurant .elText {
+    position: relative;
+    margin-top: 59px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .NoSelectedRestaurant .elText > * { 
+    width: 100%;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .ListItemWeeksDetails {
+    min-height: 152px;
+    min-width: 237px;
+     /* This component has a fixed size */
+  }
+  .ListItemWeeksDetails > .background > .containerMinHeight {
+    min-height: 152px;
+  }
+
+
+  .ListItemWeeksDetails .state0_elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+  .ListItemWeeksDetails .state0_elText282255 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemWeeksDetails .state0_elText282255 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemWeeksDetails .state0_elTextCopy152426 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemWeeksDetails .state0_elTextCopy152426 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemWeeksDetails .state0_elTextCopy3785607 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemWeeksDetails .state0_elTextCopy3785607 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemWeeksDetails .state0_elTextCopy2917188 {
+    position: absolute;
+    margin-top: 12px;
+    width: 131px;
+    margin-left: 5.3%;
+  }
+  .ListItemWeeksDetails .state0_elTextCopy2917188 > * { 
+  width: 131px;
+  }
+  
+  .flowRow_ListItemWeeksDetails_state0_elTextCopy2917188_917188 { 
+  }
+  
+
+.ListItemWeeksDetails .state0_elButton450243 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+  .ListItemWeeksDetails .state0_elButton450243 {
+    line-height: 31px;
+    position: relative;
+    margin-top: 6px;
+    width: 98px;
+    margin-left: 57.9%;
+  }
+  .ListItemWeeksDetails .state0_elButton450243 > * { 
+  width: 98px;
+  height: 31px;
+  }
+  
+
+
+  .ListItemWeeksDetails .state0_elLine868599 {
+    position: relative;
+    margin-top: 7px;
+    margin-left: 6px;
+    margin-right: 0px;
+    width: calc(100.0% - 6px);
+  }
+  .ListItemWeeksDetails .state0_elLine868599 > * { 
+    width: 100%;
+  height: 2px;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .ListItemWeeksDetails {
+    min-height: 152px;
+    min-width: 237px;
+     /* This component has a fixed size */
+  }
+  .ListItemWeeksDetails > .background > .containerMinHeight {
+    min-height: 152px;
+  }
+
+
+  .ListItemWeeksDetails .state1_elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+  .ListItemWeeksDetails .state1_elText282255 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemWeeksDetails .state1_elText282255 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemWeeksDetails .state1_elTextCopy152426 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemWeeksDetails .state1_elTextCopy152426 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemWeeksDetails .state1_elTextCopy3785607 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemWeeksDetails .state1_elTextCopy3785607 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemWeeksDetails .state1_elTextCopy2917188 {
+    position: absolute;
+    margin-top: 12px;
+    width: 131px;
+    margin-left: 5.3%;
+  }
+  .ListItemWeeksDetails .state1_elTextCopy2917188 > * { 
+  width: 131px;
+  }
+  
+  .flowRow_ListItemWeeksDetails_state1_elTextCopy2917188_917188 { 
+  }
+  
+
+.ListItemWeeksDetails .state1_elButton450243 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+  .ListItemWeeksDetails .state1_elButton450243 {
+    line-height: 31px;
+    position: relative;
+    margin-top: 6px;
+    width: 98px;
+    margin-left: 57.9%;
+  }
+  .ListItemWeeksDetails .state1_elButton450243 > * { 
+  width: 98px;
+  height: 31px;
+  }
+  
+
+
+  .ListItemWeeksDetails .state1_elLine868599 {
+    position: relative;
+    margin-top: 7px;
+    margin-left: 6px;
+    margin-right: 0px;
+    width: calc(100.0% - 6px);
+  }
+  .ListItemWeeksDetails .state1_elLine868599 > * { 
+    width: 100%;
+  height: 2px;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .Week {
+    min-height: 306px;
+    width: 100%; /* This component was designed using a width of 420px */
+  }
+  .Week > .background > .containerMinHeight {
+    min-height: 306px;
+  }
+
+
+  .Week .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100.0%;
+    height: 100%;
+  }
+
+  .Week .elList li {
+    margin-bottom: 9px;
+  }
+
+
+
+  .Week .elList {
+    position: relative;
+    margin-top: -4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .Week .elList > * { 
+    width: 100%;
+  height: 291px;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .ReviewsComp {
+    min-height: 229px;
+    width: 100%; /* This component was designed using a width of 428px */
+  }
+  .ReviewsComp > .background > .containerMinHeight {
+    min-height: 229px;
+  }
+
+  .ReviewsComp .elList li {
+    margin-bottom: 9px;
+  }
+
+
+
+  .ReviewsComp .elList {
+    position: relative;
+    margin-top: -2px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .ReviewsComp .elList > * { 
+    width: 100%;
+  height: 554px;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .StarOff {
+    min-height: 46px;
+    overflow: hidden;
+    min-width: 46px;
+     /* This component has a fixed size */
+  }
+  .StarOff > .background > .containerMinHeight {
+    min-height: 46px;
+  }
+
+.StarOff .elIconButton {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.StarOff .elIconButton:focus {
+  box-shadow: 0 0 6px rgba(66, 66, 66, 0.2500);
+  outline: none;
+}
+
+
+
+  .StarOff .elIconButton {
+    line-height: 46px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 46px;
+  }
+
+/* This component has a fixed-size layout */
+  .StarOn {
+    min-height: 46px;
+    overflow: hidden;
+    min-width: 46px;
+     /* This component has a fixed size */
+  }
+  .StarOn > .background > .containerMinHeight {
+    min-height: 46px;
+  }
+
+.StarOn .elIconButton {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.StarOn .elIconButton:focus {
+  box-shadow: 0 0 6px rgba(66, 66, 66, 0.2500);
+  outline: none;
+}
+
+
+
+  .StarOn .elIconButton {
+    line-height: 46px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 46px;
+  }
+
+
+/* Narrowest size for this element's responsive layout */
+  .ListDetailsScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .ListDetailsScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .ListDetailsScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .ListDetailsScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .ListDetailsScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 91px;
+    width: 238px;
+    margin-left: 12px;
+  }
+  .ListDetailsScreen > .layoutFlow > .elText > * { 
+  width: 238px;
+  }
+  
+@media (min-width: 568px) {
+  .ListDetailsScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 91px;
+    width: 238px;
+    margin-left: 12px;
+  }
+  .ListDetailsScreen > .layoutFlow > .elText > * { 
+  width: 238px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .ListDetailsScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 90px;
+    width: 236px;
+    margin-left: 12px;
+  }
+  .ListDetailsScreen > .layoutFlow > .elText > * { 
+  width: 236px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .ListDetailsScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 90px;
+    width: 236px;
+    margin-left: 12px;
+  }
+  .ListDetailsScreen > .layoutFlow > .elText > * { 
+  width: 236px;
+  }
+  
+}
+
+  .ListDetailsScreen .elColumns:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .ListDetailsScreen .elColumns .col0 {
+    float: left;
+    position: relative;
+  }
+
+@media (min-width: 1024px) {
+  .ListDetailsScreen .elColumns .col0 {
+    width: calc(50.0% - 9.0px*(1/2));
+    overflow: hidden;
+  }
+
+  .ListDetailsScreen .elColumns .col0 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .ListDetailsScreen .elColumns .col1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 1023px) {
+  .ListDetailsScreen .elColumns .col0 {
+    width: calc(50.0% - 9.0px*(1/2));
+    overflow: hidden;
+  }
+
+  .ListDetailsScreen .elColumns .col0 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .ListDetailsScreen .elColumns .col0 {
+    width: calc(50.0% - 9.1px*(1/2));
+    overflow: hidden;
+  }
+
+  .ListDetailsScreen .elColumns .col0 { margin-right: 0; margin-bottom: 0; }
+  .ListDetailsScreen .elColumns .col0 {
+    margin-right: 9.1px;
+    margin-bottom: 9.1px;
+  }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 567px) {
+  .ListDetailsScreen .elColumns .col0 {
+    width: calc(100.0% - 0.0px*(0/1));
+    overflow: hidden;
+  }
+
+  .ListDetailsScreen .elColumns .col0 { margin-right: 0; margin-bottom: 0; }
+  .ListDetailsScreen .elColumns .col0 { margin-right: 0; margin-bottom: 0; }
+  .ListDetailsScreen .elColumns .col0 {
+    margin-bottom: 9.1px;
+  }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col0:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+  .ListDetailsScreen .elColumns:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .ListDetailsScreen .elColumns .col1 {
+    float: left;
+    position: relative;
+  }
+
+@media (min-width: 1024px) {
+  .ListDetailsScreen .elColumns .col1 {
+    width: calc(50.0% - 9.0px*(1/2));
+    overflow: hidden;
+  }
+
+  .ListDetailsScreen .elColumns .col0 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .ListDetailsScreen .elColumns .col1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 1023px) {
+  .ListDetailsScreen .elColumns .col1 {
+    width: calc(50.0% - 9.0px*(1/2));
+    overflow: hidden;
+  }
+
+  .ListDetailsScreen .elColumns .col0 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .ListDetailsScreen .elColumns .col1 {
+    width: calc(50.0% - 9.1px*(1/2));
+    overflow: hidden;
+  }
+
+  .ListDetailsScreen .elColumns .col0 { margin-right: 0; margin-bottom: 0; }
+  .ListDetailsScreen .elColumns .col0 {
+    margin-right: 9.1px;
+    margin-bottom: 9.1px;
+  }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 567px) {
+  .ListDetailsScreen .elColumns .col1 {
+    width: calc(100.0% - 0.0px*(0/1));
+    overflow: hidden;
+  }
+
+  .ListDetailsScreen .elColumns .col0 { margin-right: 0; margin-bottom: 0; }
+  .ListDetailsScreen .elColumns .col0 { margin-right: 0; margin-bottom: 0; }
+  .ListDetailsScreen .elColumns .col0 {
+    margin-bottom: 9.1px;
+  }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col1:after { }
+  .ListDetailsScreen .elColumns .col0:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .ListDetailsScreen > .layoutFlow > .elColumns {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .ListDetailsScreen > .layoutFlow > .elColumns > * { 
+    width: 100%;
+  height: 200px;
+  }
+  
+@media (min-width: 568px) {
+  .ListDetailsScreen > .layoutFlow > .elColumns {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .ListDetailsScreen > .layoutFlow > .elColumns > * { 
+    width: 100%;
+  height: 200px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .ListDetailsScreen > .layoutFlow > .elColumns {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .ListDetailsScreen > .layoutFlow > .elColumns > * { 
+    width: 100%;
+  height: 200px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .ListDetailsScreen > .layoutFlow > .elColumns {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .ListDetailsScreen > .layoutFlow > .elColumns > * { 
+    width: 100%;
+  height: 200px;
+  }
+  
+}
+
+/* This component has a fixed-size layout */
+  .PlaceholderForReview {
+    min-height: 184px;
+    min-width: 311px;
+     /* This component has a fixed size */
+  }
+  .PlaceholderForReview > .background > .containerMinHeight {
+    min-height: 184px;
+  }
+
+
+  .PlaceholderForReview .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+  .PlaceholderForReview .elListItemReview {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .PlaceholderForReview .elListItemReview > * { 
+    width: 100%;
+  height: 182px;
+  }
+  
+
